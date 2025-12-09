@@ -1,57 +1,26 @@
 // #include <iostream>
-// #include <queue>
-// #include <string>
-// #include <vector>
+// #include <memory>
 
-// struct Order {
-//     std::string customerName;
-//     std::vector<std::string> items;
-// };
-
-// void addOrder(std::queue<Order>& orderQueue, const Order& newOrder) {
-//     orderQueue.push(newOrder);
-//     std::cout << "Заказ добавлен для клиента: " << newOrder.customerName << "\n";
-// }
-
-// void processOrder(std::queue<Order>& orderQueue) {
-//     if (!orderQueue.empty()) {
-//         Order currentOrder = orderQueue.front();
-//         std::cout << "\nОбрабатывается заказ клиента: " << currentOrder.customerName << "\n";
-//         std::cout << "Товары в заказе:\n";
-//         for (const auto& item : currentOrder.items) {
-//             std::cout << "- " << item << "\n";
-//         }
-//         orderQueue.pop();
-//         std::cout << "Заказ обработан и удален из очереди.\n";
-//     } else {
-//         std::cout << "Очередь заказов пуста.\n";
+// void fillArray(std::unique_ptr<int[]>& arr, int n) {
+//     for (int i = 0; i < n; ++i) {
+//         arr[i] = i * i;
 //     }
 // }
 
-// int main() {
+// int main(){
 //     setlocale(LC_ALL, "rus");
-//     std::queue<Order> ordersQueue;
+//     int n;
+//     std::cout << "Введите размер массива: ";
+//     std::cin >> n;
     
-//     Order order1;
-//     order1.customerName = "Иван Петров";
-//     order1.items = {"Ноутбук", "Мышка", "Чехол"};
+//     auto arr = std::make_unique<int[]>(n);
+//     fillArray(arr, n);
     
-//     Order order2;
-//     order2.customerName = "Мария Сидорова";
-//     order2.items = {"Книга", "Ручка"};
-    
-//     Order order3;
-//     order3.customerName = "Алексей Иванов";
-//     order3.items = {"Смартфон", "Наушники", "Зарядное устройство"};
-    
-//     addOrder(ordersQueue, order1);
-//     addOrder(ordersQueue, order2);
-//     addOrder(ordersQueue, order3);
-    
-//     processOrder(ordersQueue);
-//     processOrder(ordersQueue);
-//     processOrder(ordersQueue);
-//     processOrder(ordersQueue);
+//     std::cout << "Массив квадратов: ";
+//     for (int i = 0; i < n; ++i) {
+//         std::cout << arr[i] << " ";
+//     }
+//     std::cout << std::endl;
     
 //     return 0;
 // }

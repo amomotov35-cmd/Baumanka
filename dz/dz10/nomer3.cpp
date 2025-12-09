@@ -1,51 +1,25 @@
 // #include <iostream>
-
-// struct Date {
-//     int year;
-//     int month;
-//     int day;
-// };
-
-// struct Time {
-//     int hour;
-//     int minute;
-//     int second;
-// };
-
-// union DateTime {
-//     Date date;
-//     Time time;
-// };
+// #include <fstream>
+// #include <string>
 
 // int main() {
 //     setlocale(LC_ALL, "rus");
-//     DateTime dt;
+//     std::ifstream file("text.txt");
     
-//     std::cout << "Введите год: ";
-//     std::cin >> dt.date.year;
+//     if (!file.is_open()) {
+//         std::cerr << "Ошибка открытия файла!" << std::endl;
+//         return 1;
+//     }
     
-//     std::cout << "Введите месяц: ";
-//     std::cin >> dt.date.month;
+//     int wordCount = 0;
+//     std::string word;
     
-//     std::cout << "Введите день: ";
-//     std::cin >> dt.date.day;
+//     while (file >> word) {
+//         wordCount++;
+//     }
     
-//     std::cout << "Введите час: ";
-//     std::cin >> dt.time.hour;
+//     std::cout << "Количество слов в файле: " << wordCount << std::endl;
     
-//     std::cout << "Введите минуту: ";
-//     std::cin >> dt.time.minute;
-    
-//     std::cout << "Введите секунду: ";
-//     std::cin >> dt.time.second;
-    
-//     std::cout << "Дата и время: " 
-//               << dt.date.year << "-" 
-//               << dt.date.month << "-" 
-//               << dt.date.day << " "
-//               << dt.time.hour << ":" 
-//               << dt.time.minute << ":" 
-//               << dt.time.second << std::endl;
-    
+//     file.close();
 //     return 0;
 // }

@@ -1,46 +1,25 @@
 // #include <iostream>
-// #include <cmath>
-// #define _USE_MATH_DEFINES
-
-// struct Circle {
-//     double radius;
-// };
-
-// struct Rectangle {
-//     double length;
-//     double width;
-// };
-
-// union Shape {
-//     Circle circle;
-//     Rectangle rectangle;
-// };
+// #include <fstream>
+// #include <string>
 
 // int main() {
 //     setlocale(LC_ALL, "rus");
-//     Shape figure;
-//     int choice;
+//     std::ifstream file("data.txt");
     
-//     std::cout << "Выберите фигуру (1 - круг, 2 - прямоугольник): ";
-//     std::cin >> choice;
-    
-//     if (choice == 1) {
-//         std::cout << "Введите радиус круга: ";
-//         std::cin >> figure.circle.radius;
-//         double area = M_PI * figure.circle.radius * figure.circle.radius;
-//         std::cout << "Площадь круга: " << area << std::endl;
-//     }
-//     else if (choice == 2) {
-//         std::cout << "Введите длину прямоугольника: ";
-//         std::cin >> figure.rectangle.length;
-//         std::cout << "Введите ширину прямоугольника: ";
-//         std::cin >> figure.rectangle.width;
-//         double area = figure.rectangle.length * figure.rectangle.width;
-//         std::cout << "Площадь прямоугольника: " << area << std::endl;
-//     }
-//     else {
-//         std::cout << "Неверный выбор." << std::endl;
+//     if (!file.is_open()) {
+//         std::cerr << "Ошибка открытия файла!" << std::endl;
+//         return 1;
 //     }
     
+//     int lineCount = 0;
+//     std::string line;
+    
+//     while (std::getline(file, line)) {
+//         lineCount++;
+//     }
+    
+//     std::cout << "Количество строк в файле: " << lineCount << std::endl;
+    
+//     file.close();
 //     return 0;
 // }

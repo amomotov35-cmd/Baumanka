@@ -1,33 +1,20 @@
 // #include <iostream>
-// #include <queue>
-// #include <string>
-
-// void addEvent(std::queue<std::string>& eventQueue, const std::string& event) {
-//     eventQueue.push(event);
-//     std::cout << "Событие добавлено: " << event << "\n";
-// }
-
-// void processEvents(std::queue<std::string>& eventQueue) {
-//     if (!eventQueue.empty()) {
-//         std::cout << "Обрабатывается событие: " << eventQueue.front() << "\n";
-//         eventQueue.pop();
-//     } else {
-//         std::cout << "Очередь событий пуста.\n";
-//     }
-// }
+// #include <memory>
 
 // int main() {
 //     setlocale(LC_ALL, "rus");
-//     std::queue<std::string> networkEvents;
-    
-//     addEvent(networkEvents, "Запрос от клиента A: GET /home");
-//     addEvent(networkEvents, "Запрос от клиента B: POST /data");
-//     addEvent(networkEvents, "Запрос от клиента C: GET /about");
-    
-//     processEvents(networkEvents);
-//     processEvents(networkEvents);
-//     processEvents(networkEvents);
-//     processEvents(networkEvents);
+//     int n;
+//     std::cout << "Введите размер массива: ";
+//     std::cin >> n;
+//     auto arr = std::make_unique<int[]>(n);
+//     for (int i = 0; i < n; ++i) {
+//         arr[i] = i + 1;
+//     }
+//     std::cout << "Массив: ";
+//     for (int i = 0; i < n; ++i) {
+//         std::cout << arr[i] << " ";
+//     }
+//     std::cout << std::endl;
     
 //     return 0;
 // }
